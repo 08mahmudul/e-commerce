@@ -8,9 +8,9 @@
 */
 const STORE_CONFIG = {
   // Paste your deployed Google Apps Script Web App URL here.
-  APPS_SCRIPT_URL: "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzTk6X4Jd3vvBAy8g8250mDHtezScZne7h3SkhCA5_N4BNF3tg8enA2XBesONEvr8AP/exec",
   // Use country code + number, digits only. Example Bangladesh: 8801XXXXXXXXX
-  WHATSAPP_NUMBER: "8801XXXXXXXXX",
+  WHATSAPP_NUMBER: "8801887487033",
   CURRENCY: "৳",
   DELIVERY_DHAKA: 90,
   DELIVERY_OUTSIDE: 110
@@ -18,14 +18,14 @@ const STORE_CONFIG = {
 
 // Demo products: replace these details with your real products.
 const PRODUCTS = [
-  {id:"hoodie-01",name:"Everyday Essential Hoodie",category:"Hoodies",price:890,oldPrice:1090,tag:"BESTSELLER",image:"hoodie-01.jpg",colors:[{name:"Charcoal",hex:"#34383b"},{name:"Cream",hex:"#e8ddc9"},{name:"Olive",hex:"#69715a"}],sizes:["S","M","L","XL"],description:"A soft everyday hoodie."},
-  {id:"sweater-01",name:"Soft Knit Sweater",category:"Sweaters",price:990,oldPrice:1190,tag:"NEW IN",image:"sweater-01.jpg",colors:[{name:"Oatmeal",hex:"#cbb89e"},{name:"Black",hex:"#252525"}],sizes:["M","L","XL"],description:"A cosy knit for cooler days."},
-  {id:"jacket-01",name:"Classic Utility Jacket",category:"Jackets",price:1490,oldPrice:1690,tag:"WINTER PICK",image:"jacket-02.jpg",colors:[{name:"Black",hex:"#242424"},{name:"Sand",hex:"#b5a087"}],sizes:["M","L","XL"],description:"An easy layer for everyday wear."},
-  {id:"hoodie-02",name:"Relaxed Fit Sweatshirt",category:"Hoodies",price:790,oldPrice:null,tag:"EASY LAYER",image:"hoodie-02.jpg",colors:[{name:"Ash Grey",hex:"#9b9b96"},{name:"Navy",hex:"#263b51"}],sizes:["S","M","L","XL"],description:"A relaxed-fit winter staple."},
-  {id:"sweater-02",name:"Ribbed Mock Neck",category:"Sweaters",price:1090,oldPrice:null,tag:"NEW IN",image:"sweater-02.jpg",colors:[{name:"Brown",hex:"#7b5742"},{name:"Cream",hex:"#e8ddc9"}],sizes:["S","M","L"],description:"A polished cold-weather layer."},
-  {id:"jacket-02",name:"Puffer Style Jacket",category:"Jackets",price:1890,oldPrice:2190,tag:"WINTER PICK",image:"jacket-02.jpg",colors:[{name:"Black",hex:"#252525"},{name:"Olive",hex:"#69715a"}],sizes:["M","L","XL"],description:"A warm layer for chilly days."},
-  {id:"hoodie-03",name:"Minimal Logo Hoodie",category:"Hoodies",price:950,oldPrice:null,tag:"EVERYDAY",image:"hoodie-03.jpg",colors:[{name:"Navy",hex:"#263b51"},{name:"Cream",hex:"#e8ddc9"}],sizes:["S","M","L","XL"],description:"A simple hoodie with a clean look."},
-  {id:"sweater-03",name:"Textured Crew Sweater",category:"Sweaters",price:1190,oldPrice:1390,tag:"LIMITED EDIT",image:"sweater-02.jpg",colors:[{name:"Stone",hex:"#b5aa9b"},{name:"Forest",hex:"#43564a"}],sizes:["M","L","XL"],description:"A textured layer for everyday styling."}
+  {id:"hoodie-01",name:"Everyday Essential Hoodie",category:"Hoodies",price:890,oldPrice:1090,tag:"BESTSELLER",image:"assets/products/hoodie-01.jpg",colors:[{name:"Charcoal",hex:"#34383b"},{name:"Cream",hex:"#e8ddc9"},{name:"Olive",hex:"#69715a"}],sizes:["S","M","L","XL"],description:"A soft everyday hoodie."},
+  {id:"sweater-01",name:"Soft Knit Sweater",category:"Sweaters",price:990,oldPrice:1190,tag:"NEW IN",image:"assets/products/sweater-01.jpg",colors:[{name:"Oatmeal",hex:"#cbb89e"},{name:"Black",hex:"#252525"}],sizes:["M","L","XL"],description:"A cosy knit for cooler days."},
+  {id:"jacket-01",name:"Classic Utility Jacket",category:"Jackets",price:1490,oldPrice:1690,tag:"WINTER PICK",image:"assets/products/jacket-01.jpg",colors:[{name:"Black",hex:"#242424"},{name:"Sand",hex:"#b5a087"}],sizes:["M","L","XL"],description:"An easy layer for everyday wear."},
+  {id:"hoodie-02",name:"Relaxed Fit Sweatshirt",category:"Hoodies",price:790,oldPrice:null,tag:"EASY LAYER",image:"assets/products/hoodie-02.jpg",colors:[{name:"Ash Grey",hex:"#9b9b96"},{name:"Navy",hex:"#263b51"}],sizes:["S","M","L","XL"],description:"A relaxed-fit winter staple."},
+  {id:"sweater-02",name:"Ribbed Mock Neck",category:"Sweaters",price:1090,oldPrice:null,tag:"NEW IN",image:"assets/products/sweater-02.jpg",colors:[{name:"Brown",hex:"#7b5742"},{name:"Cream",hex:"#e8ddc9"}],sizes:["S","M","L"],description:"A polished cold-weather layer."},
+  {id:"jacket-02",name:"Puffer Style Jacket",category:"Jackets",price:1890,oldPrice:2190,tag:"WINTER PICK",image:"assets/products/jacket-02.jpg",colors:[{name:"Black",hex:"#252525"},{name:"Olive",hex:"#69715a"}],sizes:["M","L","XL"],description:"A warm layer for chilly days."},
+  {id:"hoodie-03",name:"Minimal Logo Hoodie",category:"Hoodies",price:950,oldPrice:null,tag:"EVERYDAY",image:"assets/products/hoodie-03.jpg",colors:[{name:"Navy",hex:"#263b51"},{name:"Cream",hex:"#e8ddc9"}],sizes:["S","M","L","XL"],description:"A simple hoodie with a clean look."},
+  {id:"sweater-03",name:"Textured Crew Sweater",category:"Sweaters",price:1190,oldPrice:1390,tag:"LIMITED EDIT",image:"assets/products/sweater-03.jpg",colors:[{name:"Stone",hex:"#b5aa9b"},{name:"Forest",hex:"#43564a"}],sizes:["M","L","XL"],description:"A textured layer for everyday styling."}
 ];
 
 const $ = (selector) => document.querySelector(selector);
@@ -61,7 +61,7 @@ function renderProducts() {
         <span class="product-category">${escapeHTML(p.category)}</span>
         <h3 class="product-name">${escapeHTML(p.name)}</h3>
         <div class="product-bottom"><div class="product-price">${money(p.price)} ${p.oldPrice ? `<span class="old-price">${money(p.oldPrice)}</span>` : ""}</div>
-          <div class="swatches" aria-label="Available colours">${p.colors.slice(0,4).map(c=>`<span class="swatch" title="${escapeHTML(c.name)}" style="background:${escapeHTML(c.hex)}"></span>`).join("")}</div>
+
         </div>
       </div>
     </article>`).join("");
@@ -76,7 +76,6 @@ function openProductOptions(productId) {
     <div class="options-body">
       <p class="option-price">${money(p.price)} ${p.oldPrice ? `<span class="old-price">${money(p.oldPrice)}</span>` : ""}</p>
       <p class="option-description">${escapeHTML(p.description)}</p>
-      <label class="option-label">Choose colour<select id="optionColor">${p.colors.map(c=>`<option value="${escapeHTML(c.name)}">${escapeHTML(c.name)}</option>`).join("")}</select></label>
       <label class="option-label">Choose size<select id="optionSize">${p.sizes.map(s=>`<option value="${escapeHTML(s)}">${escapeHTML(s)}</option>`).join("")}</select></label>
       <label class="option-label">Quantity<input id="optionQty" type="number" min="1" max="10" value="1"></label>
       <button class="button button-dark full-width" id="addSelected">Add to bag <span>→</span></button>
@@ -90,12 +89,11 @@ function openProductOptions(productId) {
   $("#closeOptions").addEventListener("click", closeCart);
   $("#addSelected").addEventListener("click", () => {
     const size = $("#optionSize").value;
-    const color = $("#optionColor").value;
     const qty = Math.min(10, Math.max(1, Number($("#optionQty").value) || 1));
-    const key = `${p.id}|${size}|${color}`;
+    const key = `${p.id}|${size}`;
     const existing = cart.find(i=>i.key===key);
     if (existing) existing.qty = Math.min(20,existing.qty+qty);
-    else cart.push({key,id:p.id,size,color,qty});
+    else cart.push({key,id:p.id,size,qty});
     renderCart();
     closeCart();
     showToast("Added to your bag");
@@ -122,7 +120,7 @@ function renderCart() {
   itemsEl.innerHTML = cart.map(item => {
     const p = findProduct(item.id);
     return `<div class="cart-line"><div class="cart-thumb"><img src="${escapeHTML(p.image)}" alt="" onerror="this.style.display='none';this.parentElement.textContent='DD'"></div>
-      <div><h3>${escapeHTML(p.name)}</h3><p>${escapeHTML(item.color)} · Size ${escapeHTML(item.size)}</p><strong>${money(p.price*item.qty)}</strong>
+      <div><h3>${escapeHTML(p.name)}</h3><p>Size ${escapeHTML(item.size)}</p><strong>${money(p.price*item.qty)}</strong>
       <div class="quantity-control"><button data-qty="${escapeHTML(item.key)}" data-delta="-1" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button data-qty="${escapeHTML(item.key)}" data-delta="1" aria-label="Increase quantity">+</button></div>
       <button class="remove-item" data-remove="${escapeHTML(item.key)}">Remove</button></div></div>`;
   }).join("");
@@ -185,7 +183,7 @@ function makeOrderPayload(formData) {
   const fee=area==="Dhaka"?STORE_CONFIG.DELIVERY_DHAKA:STORE_CONFIG.DELIVERY_OUTSIDE;
   const items=cart.map(item=>{
     const p=findProduct(item.id);
-    return {productId:p.id,product:p.name,category:p.category,size:item.size,color:item.color,quantity:item.qty,unitPrice:p.price,lineTotal:p.price*item.qty};
+    return {productId:p.id,product:p.name,category:p.category,size:item.size,color:"",quantity:item.qty,unitPrice:p.price,lineTotal:p.price*item.qty};
   });
   return {
     orderId:"DD"+Date.now().toString().slice(-10),
@@ -226,7 +224,7 @@ async function submitOrder(order) {
   });
 }
 function orderWhatsAppText(order) {
-  const lines=order.items.map(i=>`• ${i.product} | ${i.size} | ${i.color} × ${i.quantity} = ${money(i.lineTotal)}`).join("\n");
+  const lines=order.items.map(i=>`• ${i.product} | Size ${i.size} × ${i.quantity} = ${money(i.lineTotal)}`).join("\n");
   return `Hi Deshi Dealz, I placed an order.\nOrder ID: ${order.orderId}\nName: ${order.customerName}\nPhone: ${order.phone}\nItems:\n${lines}\nSubtotal: ${money(order.subtotal)}\nDelivery: ${money(order.deliveryFee)}\nTotal: ${money(order.total)}\nPayment: ${order.paymentMethod}\nAddress: ${order.address}, ${order.district}`;
 }
 
@@ -258,9 +256,10 @@ $('select[name="area"]').addEventListener("change",()=>{renderCart();updateCheck
 $('select[name="payment"]').addEventListener("change",e=>{$("#paymentReferenceLabel").hidden=e.target.value==="Cash on Delivery";});
 $("#checkoutForm").addEventListener("submit",async e=>{
   e.preventDefault();
+  const form=e.currentTarget;
   const status=$("#formStatus"),button=$("#placeOrderButton");
   status.className="form-status";status.textContent="";
-  const order=makeOrderPayload(new FormData(e.currentTarget));
+  const order=makeOrderPayload(new FormData(form));
   const error=validateOrder(order);
   if(error){status.classList.add("error");status.textContent=error;return;}
   button.disabled=true;button.textContent="Submitting order…";
@@ -274,7 +273,7 @@ $("#checkoutForm").addEventListener("submit",async e=>{
       const follow=document.createElement("a");follow.href=link;follow.target="_blank";follow.rel="noopener noreferrer";follow.className="button button-dark full-width";follow.style.marginTop="10px";follow.textContent="Confirm on WhatsApp";
       status.appendChild(document.createElement("br"));status.appendChild(follow);
     }
-    cart=[];renderCart();e.currentTarget.reset();$("#paymentReferenceLabel").hidden=true;
+    cart=[];renderCart();form.reset();$("#paymentReferenceLabel").hidden=true;
     showToast("Order submitted — please confirm with the store");
   }catch(err){
     status.classList.add("error");
