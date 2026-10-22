@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="Shop winter essentials at Deshi Dealz. Cozy hoodies, sweaters and jackets with delivery across Bangladesh.">
+  <title>Deshi Dealz — Winter Essentials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">WINTER DROP 2026 <span>•</span> Delivery across Bangladesh</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Deshi Dealz home">
+      <span class="brand-mark">DD</span>
+      <span><strong>DESHI DEALZ</strong><small>WINTER COLLECTION</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#story">Our Edit</a><a href="#delivery">Delivery</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Open search">⌕</button>
+      <button class="cart-button" id="openCart" aria-label="Open shopping cart">Bag <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE WINTER EDIT · 2026</p>
+        <h1>Cold days.<br><em>Better layers.</em></h1>
+        <p class="hero-description">Comfort-first winter staples, picked for everyday life. Find your next favourite layer.</p>
+        <a class="button button-dark" href="#shop">Explore collection <span>↗</span></a>
+        <div class="hero-note"><span class="note-dot"></span> Easy ordering · Cash on delivery available</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-blob"></div>
+        <div class="hero-product-label"><span>01 / THE WINTER EDIT</span><strong>Made for the<br>everyday chill.</strong></div>
+        <div class="hero-placeholder">
+          <span class="placeholder-icon">✳</span>
+          <span>Add your winter campaign photo</span>
+          <small>assets/products/hero.jpg</small>
+        </div>
+        <div class="hero-stamp">COZY<br>SEASON</div>
+      </div>
+    </section>
+
+    <section class="trust-strip" id="delivery">
+      <div><span>01</span><strong>Thoughtful winter picks</strong></div>
+      <div><span>02</span><strong>Delivery across Bangladesh</strong></div>
+      <div><span>03</span><strong>Simple, secure ordering</strong></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">CURATED FOR THE COLD</p><h2>Winter essentials<span>.</span></h2></div>
+        <p class="section-intro">Your daily uniform, with a little extra warmth.</p>
+      </div>
+      <div class="shop-toolbar">
+        <div class="category-tabs" role="group" aria-label="Filter products">
+          <button class="filter-chip active" data-category="All">All items</button>
+          <button class="filter-chip" data-category="Hoodies">Hoodies</button>
+          <button class="filter-chip" data-category="Sweaters">Sweaters</button>
+          <button class="filter-chip" data-category="Jackets">Jackets</button>
+        </div>
+        <label class="search-box" id="searchBox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search winter wear..." aria-label="Search products"></label>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p class="demo-notice">Demo products are shown for layout preview. Replace names, prices and photos in <code>script.js</code> before publishing.</p>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-art"><div class="story-circle">DD</div><span>THE DESHI DEALZ EDIT</span></div>
+      <div class="story-copy"><p class="eyebrow">LESS FUSS. MORE COMFORT.</p><h2>Layers that feel<br><em>like your own.</em></h2><p>Build your cold-weather rotation with easy-to-wear staples. Choose your size and colour, place your order, and we’ll get in touch to confirm the details.</p><a href="#shop" class="text-link">Find your layer <span>↗</span></a></div>
+    </section>
+
+    <section class="delivery-banner">
+      <div><p class="eyebrow">DELIVERY MADE SIMPLE</p><h2>From our edit<br>to your doorstep.</h2></div>
+      <div class="delivery-prices"><div><small>INSIDE DHAKA</small><strong>৳90</strong></div><div><small>OUTSIDE DHAKA</small><strong>৳110</strong></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">DD</span><span><strong>DESHI DEALZ</strong><small>WINTER COLLECTION</small></span></a><p>Everyday comfort, thoughtfully picked.</p><div class="footer-bottom"><span>© <span id="year"></span> Deshi Dealz</span><span>Made for winter in Bangladesh</span></div></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button class="close-button" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>✳</span><h3>Your bag is waiting.</h3><p>Add a layer you love to get started.</p><button class="button button-dark" id="continueShopping">Continue shopping</button></div>
+    <div class="cart-summary" id="cartSummary">
+      <div><span>Subtotal</span><strong id="subtotal">৳0</strong></div>
+      <div><span>Delivery</span><strong id="deliveryFee">Calculated at checkout</strong></div>
+      <div class="total-row"><span>Estimated total</span><strong id="estimatedTotal">৳0</strong></div>
+      <button class="button button-dark full-width" id="checkoutButton">Continue to checkout <span>→</span></button>
+      <small>Delivery: ৳90 inside Dhaka · ৳110 outside Dhaka</small>
+    </div>
+  </aside>
+
+  <div class="modal-wrap" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" aria-hidden="true">
+    <div class="checkout-modal">
+      <div class="drawer-head"><div><p class="eyebrow">ALMOST YOURS</p><h2 id="checkoutTitle">Complete your order</h2></div><button class="close-button" id="closeCheckout" aria-label="Close checkout">×</button></div>
+      <form id="checkoutForm">
+        <div class="form-grid">
+          <label>Full name *<input name="name" required autocomplete="name" maxlength="100" placeholder="Your name"></label>
+          <label>Phone number *<input name="phone" required autocomplete="tel" inputmode="tel" maxlength="20" placeholder="01XXXXXXXXX"></label>
+          <label class="full-span">Delivery address *<textarea name="address" required autocomplete="street-address" rows="2" maxlength="500" placeholder="House, road, area"></textarea></label>
+          <label>City / District *<input name="district" required maxlength="100" placeholder="e.g. Dhaka"></label>
+          <label>Delivery area *<select name="area" required><option value="">Choose area</option><option value="Dhaka">Inside Dhaka</option><option value="Outside Dhaka">Outside Dhaka</option></select></label>
+          <label class="full-span">Payment method *<select name="payment" required><option value="Cash on Delivery">Cash on Delivery (COD)</option><option value="bKash">bKash (manual confirmation)</option><option value="Nagad">Nagad (manual confirmation)</option></select></label>
+          <label class="full-span" id="paymentReferenceLabel" hidden>Payment transaction ID / reference<input name="paymentReference" maxlength="100" placeholder="Enter transaction ID if already paid"></label>
+          <label class="full-span">Order note (optional)<textarea name="note" rows="2" maxlength="500" placeholder="Any special instructions?"></textarea></label>
+        </div>
+        <div class="checkout-total"><span>Order total including delivery</span><strong id="checkoutTotal">৳0</strong></div>
+        <p class="form-help">For bKash/Nagad, payment instructions will need to be added by the store owner. Never enter your PIN or OTP here.</p>
+        <button class="button button-dark full-width" id="placeOrderButton" type="submit">Place order <span>→</span></button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <a class="whatsapp-fab" id="whatsappLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">☏ <span>Chat with us</span></a>
+  <script src="script.js"></script>
+</body>
+</html>
